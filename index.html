@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter project</title>
+    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f199bb3349.js" crossorigin="anonymous"></script>
+    
+    <!-- always at the bottom to avoid overwritting by another file -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="coverter">
+        <label for="converter" class="converter__label">Conventer <span class="celsius">°C</span> to <span class="fahrenheit">°F</span></label>
+        <input type="number" id="converter" placeholder="Enter a number" class="converter__input">
+        <p class="coverter__result"></p>
+
+        <div class="coverter__btn-box">
+            <button class="conventer__btn conventer__btn--convert">convert</button>
+            <button class="conventer__btn conventer__btn--swap">swap</button>
+            <button class="conventer__btn conventer__btn--reset">reset</button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
