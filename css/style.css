@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1e1d23;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.converter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-self: center;
+  padding: 2em 4em;
+  background-color: #05445E;
+  border-radius: 8px;
+}
+
+.converter__label, .converter__input {
+  display: block;
+}
+
+.converter__label {
+  font-size: 3.6rem;
+}
+
+.converter__input {
+  padding: .6em 1.2em;
+  margin: 1em 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.converter__result {
+  margin-bottom: 1em;
+}
+
+.converter__btn {
+  padding: .5em 1em;
+  margin: 0 .5em;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: background-color .3s, color .3s;
+  transition: background-color .3s, color .3s;
+}
+
+.converter__btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */
