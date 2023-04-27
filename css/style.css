@@ -10,14 +10,18 @@ html {
 }
 
 body {
-  display: -ms-grid;
-  display: grid;
-  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   background-color: #1e1d23;
   color: #fff;
   font-size: 24px;
   text-align: center;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  padding: 0 1em;
 }
 
 .converter {
@@ -35,7 +39,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   place-self: center;
-  padding: 2em 4em;
+  padding: 2em;
   background-color: #05445E;
   border-radius: 8px;
 }
@@ -45,30 +49,41 @@ body {
 }
 
 .converter__label {
-  font-size: 3.6rem;
+  font-size: 2.4rem;
 }
 
 .converter__input {
-  padding: .6em 1.2em;
+  padding: .4em .8em;
   margin: 1em 0;
   border: none;
   border-radius: 8px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .converter__result {
   margin-bottom: 1em;
+  font-size: 2rem;
+}
+
+.converter__btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .converter__btn {
-  padding: .5em 1em;
-  margin: 0 .5em;
+  padding: .4em .8em;
+  margin: .2em 0;
   background: transparent;
   border: 2px solid #fff;
   border-radius: 8px;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: background-color .3s, color .3s;
@@ -78,5 +93,52 @@ body {
 .converter__btn:hover {
   background-color: #fff;
   color: #000;
+}
+
+@media (min-width: 768px) {
+  .converter__label {
+    font-size: 2.8rem;
+  }
+  .converter__input {
+    padding: .6em 1.2em;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .converter {
+    padding: 3em 2em;
+  }
+  .converter__label {
+    font-size: 3.4rem;
+  }
+  .converter__input {
+    margin: 1.5em;
+    padding: .6em 1.2em;
+    font-size: 2rem;
+  }
+  .converter__result {
+    margin-bottom: 1.5em;
+    font-size: 2.2rem;
+  }
+  .converter__btn-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .converter__btn {
+    padding: .5em 1em;
+    margin: 0 .4em;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: background-color .3s, color .3s;
+    transition: background-color .3s, color .3s;
+  }
 }
 /*# sourceMappingURL=style.css.map */
