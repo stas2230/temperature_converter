@@ -50,10 +50,15 @@ const temperatureConversion = () => {
     }
 }
 
+const reset = () => {
+    result.textContent = ''
+}
+
 
 
 btnSwap.addEventListener('click', swapTemperatureUnit);
-btnConvert.addEventListener('click', temperatureConversation)
+btnConvert.addEventListener('click', temperatureConversion);
+btnReset.addEventListener('click', reset)
 
 
 // notes:
