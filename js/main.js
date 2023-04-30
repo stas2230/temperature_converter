@@ -10,7 +10,6 @@ const btnReset = document.querySelector(".conventer__btn--reset")
 let cels 
 let fahr 
 
-
 const swapTemperatureUnit = () => {
 
     if (temperatureUnit1.textContent === '°C'){
@@ -20,62 +19,44 @@ const swapTemperatureUnit = () => {
         temperatureUnit1.textContent = '°C'
         temperatureUnit2.textContent = '°F'
     }
-
 }
 
 const convertCelsToFahr = () => {
-    
+
     fahr = input.value * 1.8 + 32
     result.textContent = `${input.value}°C is equatl to ${fahr.toFixed(1)}°F`
-    input.value = ''
 }
 
 const convertFahrToCels = () => {
 
     cels = (input.value - 32) / 1.8 
     result.textContent = `${input.value}°F is equal to ${cels.toFixed(1)}°C`
-    input.value = ''
 }
+
+//temperatureConversion function checks it user inputted any value and calls other function based on chosen temerature unit
 
 const temperatureConversion = () => {
 
     if (input.value !== ''){
+        // if chosen unit is Celsius, call convertCelsToFahr funtion
         if (temperatureUnit1.textContent === '°C'){
             convertCelsToFahr()
         } else {
+        // if chosen unit is Fahrenheit, call convertFahrToCels funtion
             convertFahrToCels()
         }
     } else {
+        // if the user has not entered a value, display an error message
         result.textContent = 'Please enter a number'
     }
 }
 
 const reset = () => {
     result.textContent = ''
+    input.value = ''
 }
-
-
 
 btnSwap.addEventListener('click', swapTemperatureUnit);
 btnConvert.addEventListener('click', temperatureConversion);
 btnReset.addEventListener('click', reset)
 
-
-// notes:
-
-// convertCelcToFahr function:
-// Temperature in degrees Fahrenheit (°F) = (Temperature in degrees Celsius (°C) * 9/5) + 32.
-// adding relevant text to element with .converter__result 
-// clean input value after conversion
-
-// convertFahrToCels function:
-// Temperature in degrees Celsius (°C) = (Temperature in degrees Fahrenheit (°F) - 32) / 1.8.
-// adding relevant text to element with .converter__result
-// clean input value after conversion
-
-// give the result rounded to one decimal place 
-
-//temperatureConversion function:
-// checks if temperatureUnit1 textContent is equal to "C" and then calls convertCelsToFahr function 
-// if temperatureUnit1 textContent is equal to "F" then it calls convertFahrToCels function 
-// else result asks fot entering a number
