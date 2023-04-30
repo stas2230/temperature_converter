@@ -33,14 +33,27 @@ const convertCelsToFahr = () => {
 const convertFahrToCels = () => {
 
     cels = (input.value - 32) / 1.8 
-    result.textContent = `${input.value}°F is equatl to ${cels.toFixed(1)}°C`
+    result.textContent = `${input.value}°F is equal to ${cels.toFixed(1)}°C`
     input.value = ''
+}
+
+const temperatureConversion = () => {
+
+    if (input.value !== ''){
+        if (temperatureUnit1.textContent === '°C'){
+            convertCelsToFahr()
+        } else {
+            convertFahrToCels()
+        }
+    } else {
+        result.textContent = 'Please enter a number'
+    }
 }
 
 
 
 btnSwap.addEventListener('click', swapTemperatureUnit);
-btnConvert.addEventListener('click', convertFahrToCels)
+btnConvert.addEventListener('click', temperatureConversation)
 
 
 // notes:
@@ -57,3 +70,7 @@ btnConvert.addEventListener('click', convertFahrToCels)
 
 // give the result rounded to one decimal place 
 
+//temperatureConversion function:
+// checks if temperatureUnit1 textContent is equal to "C" and then calls convertCelsToFahr function 
+// if temperatureUnit1 textContent is equal to "F" then it calls convertFahrToCels function 
+// else result asks fot entering a number
